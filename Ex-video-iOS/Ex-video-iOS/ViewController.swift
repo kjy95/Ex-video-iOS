@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBAction func playInternalVideoBtn(_ sender: Any) {
+        let filePath:String? = Bundle.main.path(forResource: "tokyoSkyTree", ofType: "mp4")
+        let url = NSURL(fileURLWithPath: filePath!)
+        playVideo(url: url)
+        
+    }
+    private func playVideo(url: NSURL){
+        //nsurl??
+        let playerController = AVPlayerViewController()
+        
+        let player = AVPlayer(url: url as URL)
+        playerController.player = player
+        self.present(playerController, animated: true){
+            player.play()
+        }
+    }
+    
 }
 

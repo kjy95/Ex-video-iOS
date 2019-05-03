@@ -18,20 +18,26 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17F-R2-lCD">
+                                <rect key="frame" x="144" y="105" width="86" height="30"/>
+                                <state key="normal" title="앱 내부 비디오"/>
+                                <connections>
+                                    <action selector="playInternalVideoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbN-wl-leP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="17F-R2-lCD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="4ko-He-G7W"/>
+                            <constraint firstItem="17F-R2-lCD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="D6C-Be-zvN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="17F-R2-lCD" secondAttribute="trailing" constant="145" id="Nuj-Zw-A8V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="242" y="-432"/>
-        </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="4e8-LW-gOj">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="L4z-uM-gEa" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VDI-SJ-s35" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="916" y="-432"/>
         </scene>
     </scenes>
 </document>

@@ -15,6 +15,7 @@
 		BF702FD9227BD766000D45DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF702FD7227BD766000D45DB /* LaunchScreen.storyboard */; };
 		BF702FE4227BD766000D45DB /* Ex_video_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF702FE3227BD766000D45DB /* Ex_video_iOSTests.swift */; };
 		BF702FEF227BD766000D45DB /* Ex_video_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF702FEE227BD766000D45DB /* Ex_video_iOSUITests.swift */; };
+		BF702FFE227CA2E6000D45DB /* tokyoSkyTree.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF702FFD227CA0D8000D45DB /* tokyoSkyTree.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BF702FEA227BD766000D45DB /* Ex-video-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ex-video-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF702FEE227BD766000D45DB /* Ex_video_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex_video_iOSUITests.swift; sourceTree = "<group>"; };
 		BF702FF0227BD766000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF702FFD227CA0D8000D45DB /* tokyoSkyTree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tokyoSkyTree.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		BF702FCA227BD764000D45DB /* Ex-video-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				BF702FFC227CA06A000D45DB /* Resources */,
 				BF702FCB227BD764000D45DB /* AppDelegate.swift */,
 				BF702FCD227BD764000D45DB /* ViewController.swift */,
 				BF702FCF227BD764000D45DB /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				BF702FF0227BD766000D45DB /* Info.plist */,
 			);
 			path = "Ex-video-iOSUITests";
+			sourceTree = "<group>";
+		};
+		BF702FFC227CA06A000D45DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF702FFD227CA0D8000D45DB /* tokyoSkyTree.mp4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF702FFE227CA2E6000D45DB /* tokyoSkyTree.mp4 in Resources */,
 				BF702FD9227BD766000D45DB /* LaunchScreen.storyboard in Resources */,
 				BF702FD6227BD766000D45DB /* Assets.xcassets in Resources */,
 				BF702FD1227BD764000D45DB /* Main.storyboard in Resources */,
