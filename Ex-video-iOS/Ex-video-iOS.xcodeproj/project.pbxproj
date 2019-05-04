@@ -16,6 +16,7 @@
 		BF702FE4227BD766000D45DB /* Ex_video_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF702FE3227BD766000D45DB /* Ex_video_iOSTests.swift */; };
 		BF702FEF227BD766000D45DB /* Ex_video_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF702FEE227BD766000D45DB /* Ex_video_iOSUITests.swift */; };
 		BF702FFE227CA2E6000D45DB /* tokyoSkyTree.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF702FFD227CA0D8000D45DB /* tokyoSkyTree.mp4 */; };
+		BF703000227DB98D000D45DB /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF702FFF227DB98C000D45DB /* VideoLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BF702FEE227BD766000D45DB /* Ex_video_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex_video_iOSUITests.swift; sourceTree = "<group>"; };
 		BF702FF0227BD766000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF702FFD227CA0D8000D45DB /* tokyoSkyTree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tokyoSkyTree.mp4; sourceTree = "<group>"; };
+		BF702FFF227DB98C000D45DB /* VideoLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				BF702FD7227BD766000D45DB /* LaunchScreen.storyboard */,
 				BF702FDA227BD766000D45DB /* Info.plist */,
 				BF702FD2227BD764000D45DB /* Ex_video_iOS.xcdatamodeld */,
+				BF702FFF227DB98C000D45DB /* VideoLauncher.swift */,
 			);
 			path = "Ex-video-iOS";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				BF702FCE227BD764000D45DB /* ViewController.swift in Sources */,
 				BF702FCC227BD764000D45DB /* AppDelegate.swift in Sources */,
 				BF702FD4227BD764000D45DB /* Ex_video_iOS.xcdatamodeld in Sources */,
+				BF703000227DB98D000D45DB /* VideoLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
