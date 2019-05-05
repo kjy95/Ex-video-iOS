@@ -11,6 +11,8 @@ import AVKit
 
 class VideoPlayerView:UIView{
     
+    var player :AVPlayer?
+    
     let activityIndicatorView: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: .whiteLarge)
         aiv.translatesAutoresizingMaskIntoConstraints = false
@@ -24,21 +26,35 @@ class VideoPlayerView:UIView{
         return view
     }()
     
+    lazy var pauseButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = UIImage(named: "pause")
+        button.setImage(image, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(handlePause), for: .touchUpInside)
+        return button
+    }()
+    @objc func handlePause(){
+        pauseButton.isHidden = true
+        player?.pause()
+    }
     override init(frame: CGRect){
         super.init(frame: frame)
         self.backgroundColor = UIColor.gray
     }
+    
     func playVideoURL(url: NSURL){
-        let player = AVPlayer(url: url as URL)
+        player = AVPlayer(url: url as URL)
         
         let playerLayer = AVPlayerLayer(player: player)
         self.layer.addSublayer(playerLayer)
         playerLayer.frame = self.frame
-        player.play()
+        player?.play()
         
-        player.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
+        player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
         
-        indicatorViewOnCenter()
+        setIndicatorViewOnCenterAndButton()
     }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "currentItem.loadedTimeRanges"{
@@ -46,7 +62,7 @@ class VideoPlayerView:UIView{
             controlsContainerView.backgroundColor = UIColor.clear
         }
     }
-    func indicatorViewOnCenter(){
+    func setIndicatorViewOnCenterAndButton(){
         //activityIndicator
         controlsContainerView.frame = frame
         addSubview(controlsContainerView)
@@ -56,6 +72,12 @@ class VideoPlayerView:UIView{
         activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
+        controlsContainerView.addSubview(pauseButton)
+        
+        pauseButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        pauseButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        pauseButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        pauseButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
