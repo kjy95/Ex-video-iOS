@@ -26,6 +26,23 @@ class VideoPlayerView:UIView{
         return view
     }()
     
+    let videoLentghLabel: UILabel = {
+        let label = UILabel()
+        label.text = "00:00"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .right
+        return label
+    }()
+
+    let videoSlider: UISlider = {
+        let slider = UISlider()
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.minimumTrackTintColor = .red
+        slider.maximumTrackTintColor = .white
+        return slider
+    }()
     lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
@@ -72,6 +89,18 @@ class VideoPlayerView:UIView{
             activityIndicatorView.stopAnimating()
             controlsContainerView.backgroundColor = UIColor.clear
             pausePlayButton.isHidden = false
+            isPlaying = true
+            
+            //time label
+            if let duration = player?.currentItem?.duration{
+             
+                let seconds = CMTimeGetSeconds(duration)
+                let secondsText = String(format:"%02d", Int(seconds) % 60)
+                let minutesText = String(format:"%02d", Int(seconds) / 60)
+                videoLentghLabel.text = "\(minutesText):\(secondsText)"
+                
+            }
+            
         }
         
     }
@@ -91,6 +120,20 @@ class VideoPlayerView:UIView{
         pausePlayButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         pausePlayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         pausePlayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        //label
+        controlsContainerView.addSubview(videoLentghLabel)
+        videoLentghLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
+        videoLentghLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        videoLentghLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        videoLentghLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        
+        //slider
+        controlsContainerView.addSubview(videoSlider)
+        videoSlider.rightAnchor.constraint(equalTo: videoLentghLabel.leftAnchor).isActive = true
+        videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        videoSlider.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
