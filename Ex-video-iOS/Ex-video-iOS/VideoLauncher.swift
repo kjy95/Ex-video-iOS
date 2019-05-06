@@ -41,8 +41,24 @@ class VideoPlayerView:UIView{
         slider.translatesAutoresizingMaskIntoConstraints = false
         slider.minimumTrackTintColor = .red
         slider.maximumTrackTintColor = .white
+        
+        slider.addTarget(self, action: #selector(handleSliderChange), for: .valueChanged)
+        
         return slider
     }()
+    @objc func handleSliderChange(){
+        print(videoSlider.value)
+        if let duration = player?.currentItem?.duration{
+            let totalSeconds = CMTimeGetSeconds(duration)
+            let value = Float64(videoSlider.value) * totalSeconds
+            let seekTime = CMTime(value: Int64(value), timescale: 1)
+            player?.seek(to: seekTime, completionHandler: {(completedSeek) in
+                
+            })
+            
+        }
+        
+    }
     lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
