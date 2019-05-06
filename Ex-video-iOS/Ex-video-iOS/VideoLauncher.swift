@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AVKit
+import AVFoundation
 
 class VideoPlayerView:UIView{
     
@@ -26,18 +26,68 @@ class VideoPlayerView:UIView{
         return view
     }()
     
-    lazy var pauseButton: UIButton = {
+    let videoLentghLabel: UILabel = {
+        let label = UILabel()
+        label.text = "00:00"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 13)
+        label.textAlignment = .right
+        return label
+    }()
+    let currentTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "00:00"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+
+    let videoSlider: UISlider = {
+        let slider = UISlider()
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.minimumTrackTintColor = .red
+        slider.maximumTrackTintColor = .white
+        
+        slider.addTarget(self, action: #selector(handleSliderChange), for: .valueChanged)
+        
+        return slider
+    }()
+    @objc func handleSliderChange(){
+        print(videoSlider.value)
+        if let duration = player?.currentItem?.duration{
+            let totalSeconds = CMTimeGetSeconds(duration)
+            let value = Float64(videoSlider.value) * totalSeconds
+            let seekTime = CMTime(value: Int64(value), timescale: 1)
+            player?.seek(to: seekTime, completionHandler: {(completedSeek) in
+                
+            })
+            
+        }
+        
+    }
+    lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
         button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .white
         button.addTarget(self, action: #selector(handlePause), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
+    var isPlaying = true
     @objc func handlePause(){
-        pauseButton.isHidden = true
-        player?.pause()
+        if isPlaying{
+            player?.pause()
+            pausePlayButton.setImage(UIImage(named: "play"), for: .normal)
+        }else{
+            player?.play()
+            pausePlayButton.setImage(UIImage(named: "pause"), for: .normal)
+        }
+        isPlaying = !isPlaying
     }
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -55,15 +105,49 @@ class VideoPlayerView:UIView{
         player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
         
         setIndicatorViewOnCenterAndButton()
+        
+        let interval = CMTime(value: 1, timescale: 2)
+        player?.addPeriodicTimeObserver(forInterval: interval, queue: .main, using: { (progressTime) in
+            let seconds = CMTimeGetSeconds(progressTime)
+            let secondString = String(format: "%02d", Int(seconds) % 60)
+            let minuteString = String(format: "%02d", Int(seconds / 60))
+            self.currentTimeLabel.text = "\(minuteString):\(secondString)"
+            
+            //move slider thumb
+            if let duration = self.player?.currentItem?.duration{
+                let durationSecond = CMTimeGetSeconds(duration)
+                self.videoSlider.value = Float(seconds/durationSecond)
+                
+            }
+        })
     }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+        //player is ready and rendering frames
         if keyPath == "currentItem.loadedTimeRanges"{
             activityIndicatorView.stopAnimating()
             controlsContainerView.backgroundColor = UIColor.clear
+            pausePlayButton.isHidden = false
+            isPlaying = true
+            
+            //time label
+            if let duration = player?.currentItem?.duration{
+             
+                let seconds = CMTimeGetSeconds(duration)
+                let secondsText = String(format:"%02d", Int(seconds) % 60)
+                let minutesText = String(format:"%02d", Int(seconds) / 60)
+                videoLentghLabel.text = "\(minutesText):\(secondsText)"
+                
+            }
+            
         }
+        
     }
     func setIndicatorViewOnCenterAndButton(){
         //activityIndicator
+        setupGradientLayer()
+        
         controlsContainerView.frame = frame
         addSubview(controlsContainerView)
         
@@ -72,12 +156,39 @@ class VideoPlayerView:UIView{
         activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        controlsContainerView.addSubview(pauseButton)
+        controlsContainerView.addSubview(pausePlayButton)
         
-        pauseButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        pauseButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        pauseButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        pauseButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        pausePlayButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        pausePlayButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        pausePlayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        pausePlayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        //label
+        controlsContainerView.addSubview(videoLentghLabel)
+        videoLentghLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
+        videoLentghLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3).isActive = true
+        videoLentghLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        videoLentghLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        
+        controlsContainerView.addSubview(currentTimeLabel)
+        currentTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
+        currentTimeLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3).isActive = true
+        currentTimeLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        currentTimeLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        
+        //slider
+        controlsContainerView.addSubview(videoSlider)
+        videoSlider.rightAnchor.constraint(equalTo: videoLentghLabel.leftAnchor).isActive = true
+        videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        videoSlider.leftAnchor.constraint(equalTo: currentTimeLabel.rightAnchor).isActive = true
+        videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    }
+    private func setupGradientLayer(){
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradientLayer.locations = [0.8, 1.2]
+        controlsContainerView.layer.addSublayer(gradientLayer)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
