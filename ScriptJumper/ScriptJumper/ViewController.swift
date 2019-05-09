@@ -18,9 +18,12 @@ class ViewController: UIViewController {
     
     @IBAction func playInternalVideoBtn(_ sender: Any) {
         let filePath:String? = Bundle.main.path(forResource: "tokyoSkyTree", ofType: "mp4")
-        let url = NSURL(fileURLWithPath: filePath!)
-        let playVideoView = VideoLauncher()
-        playVideoView.showVideoPlayer(url: url)
+        //let url = NSURL(fileURLWithPath: filePath!)
+        
+        if let url = NSURL(string: "https://www.youtube.com/watch?v=-tm4gC26VgA"){
+            let playVideoView = VideoLauncher()
+            playVideoView.showVideoPlayer(url: url)
+        }
         
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */; };
+		BF3B53DA228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */; };
+		BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */; };
+		BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */; };
 		BF70304B22815D42000D45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304A22815D42000D45DB /* AppDelegate.swift */; };
 		BF70304D22815D42000D45DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304C22815D42000D45DB /* ViewController.swift */; };
 		BF70305022815D42000D45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70304E22815D42000D45DB /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi"; sourceTree = "<group>"; };
+		BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "저기..+제가+통화중이라+그런데...smi"; sourceTree = "<group>"; };
+		BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주.smi"; sourceTree = "<group>"; };
+		BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주 +일본어.smi"; sourceTree = "<group>"; };
 		BF70304722815D42000D45DB /* ScriptJumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScriptJumper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF70304A22815D42000D45DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF70304C22815D42000D45DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF3B53D4228420B80074AF3F /* smi file */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */,
+				BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */,
+				BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */,
+				BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */,
+			);
+			path = "smi file";
+			sourceTree = "<group>";
+		};
 		BF70303E22815D42000D45DB = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +124,7 @@
 		BF70304922815D42000D45DB /* ScriptJumper */ = {
 			isa = PBXGroup;
 			children = (
+				BF3B53D4228420B80074AF3F /* smi file */,
 				BF70307D22815E5E000D45DB /* Resources */,
 				BF70304A22815D42000D45DB /* AppDelegate.swift */,
 				BF70304C22815D42000D45DB /* ViewController.swift */,
@@ -213,6 +233,11 @@
 				TargetAttributes = {
 					BF70304622815D42000D45DB = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BF70305D22815D43000D45DB = {
 						CreatedOnToolsVersion = 10.1;
@@ -250,9 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF70307F22815ED9000D45DB /* tokyoSkyTree.mp4 in Resources */,
+				BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */,
+				BF3B53DA228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */,
 				BF70305822815D43000D45DB /* LaunchScreen.storyboard in Resources */,
 				BF70305522815D43000D45DB /* Assets.xcassets in Resources */,
+				BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */,
 				BF70305022815D42000D45DB /* Main.storyboard in Resources */,
+				BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

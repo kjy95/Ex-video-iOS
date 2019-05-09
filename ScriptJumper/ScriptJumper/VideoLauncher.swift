@@ -181,6 +181,10 @@ class VideoPlayerView:UIView{
         videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         videoSlider.leftAnchor.constraint(equalTo: currentTimeLabel.rightAnchor).isActive = true
         videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        //subtitle
+        let subtitle = SmiParser(subfileName: "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+)", ofType: "smi")
+        
     }
     private func setupGradientLayer(){
         let gradientLayer = CAGradientLayer()
@@ -194,7 +198,6 @@ class VideoPlayerView:UIView{
     }
     
 }
-
 class VideoLauncher: NSObject {
     func showVideoPlayer(url: NSURL){
         //nsurl??
