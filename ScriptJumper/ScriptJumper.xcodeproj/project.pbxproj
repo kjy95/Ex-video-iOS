@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69DEB06F042C384F10B265FA /* Pods_ScriptJumper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2FA07C722DC48834ACC9F5 /* Pods_ScriptJumper.framework */; };
 		BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */; };
 		BF3B53DA228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */; };
 		BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */; };
 		BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */; };
+		BF3B53DE22849BF00074AF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */; };
 		BF70304B22815D42000D45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304A22815D42000D45DB /* AppDelegate.swift */; };
 		BF70304D22815D42000D45DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304C22815D42000D45DB /* ViewController.swift */; };
 		BF70305022815D42000D45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70304E22815D42000D45DB /* Main.storyboard */; };
@@ -42,10 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A2FA07C722DC48834ACC9F5 /* Pods_ScriptJumper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScriptJumper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi"; sourceTree = "<group>"; };
 		BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "저기..+제가+통화중이라+그런데...smi"; sourceTree = "<group>"; };
 		BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주.smi"; sourceTree = "<group>"; };
 		BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주 +일본어.smi"; sourceTree = "<group>"; };
+		BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF70304722815D42000D45DB /* ScriptJumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScriptJumper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF70304A22815D42000D45DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF70304C22815D42000D45DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		BF70307B22815D6D000D45DB /* VideoLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
 		BF70307E22815E7F000D45DB /* tokyoSkyTree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tokyoSkyTree.mp4; sourceTree = "<group>"; };
 		BF70308022816353000D45DB /* SmiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmiParser.swift; sourceTree = "<group>"; };
+		C6B418179DFFE7082571B4E6 /* Pods-ScriptJumper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScriptJumper.release.xcconfig"; path = "Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper.release.xcconfig"; sourceTree = "<group>"; };
+		EA64C606B6D31AE4A97980B5 /* Pods-ScriptJumper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScriptJumper.debug.xcconfig"; path = "Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DEB06F042C384F10B265FA /* Pods_ScriptJumper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C87AA592B3B01A1C389097F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A2FA07C722DC48834ACC9F5 /* Pods_ScriptJumper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		489DC20A2191BDD173D03A0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA64C606B6D31AE4A97980B5 /* Pods-ScriptJumper.debug.xcconfig */,
+				C6B418179DFFE7082571B4E6 /* Pods-ScriptJumper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF3B53D4228420B80074AF3F /* smi file */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +132,8 @@
 				BF70306122815D43000D45DB /* ScriptJumperTests */,
 				BF70306C22815D43000D45DB /* ScriptJumperUITests */,
 				BF70304822815D42000D45DB /* Products */,
+				489DC20A2191BDD173D03A0C /* Pods */,
+				3C87AA592B3B01A1C389097F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +158,7 @@
 				BF70305422815D43000D45DB /* Assets.xcassets */,
 				BF70305622815D43000D45DB /* LaunchScreen.storyboard */,
 				BF70305922815D43000D45DB /* Info.plist */,
+				BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */,
 				BF70305122815D42000D45DB /* ScriptJumper.xcdatamodeld */,
 				BF70307B22815D6D000D45DB /* VideoLauncher.swift */,
 				BF70308022816353000D45DB /* SmiParser.swift */,
@@ -172,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF70307222815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumper" */;
 			buildPhases = (
+				2B8CD966AB0AAC95A9D3483D /* [CP] Check Pods Manifest.lock */,
 				BF70304322815D42000D45DB /* Sources */,
 				BF70304422815D42000D45DB /* Frameworks */,
 				BF70304522815D42000D45DB /* Resources */,
+				63391ABD048F8DCB12E395D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +310,7 @@
 				BF70305522815D43000D45DB /* Assets.xcassets in Resources */,
 				BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */,
 				BF70305022815D42000D45DB /* Main.storyboard in Resources */,
+				BF3B53DE22849BF00074AF3F /* GoogleService-Info.plist in Resources */,
 				BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +330,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B8CD966AB0AAC95A9D3483D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScriptJumper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63391ABD048F8DCB12E395D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF70304322815D42000D45DB /* Sources */ = {
@@ -483,6 +564,7 @@
 		};
 		BF70307322815D43000D45DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA64C606B6D31AE4A97980B5 /* Pods-ScriptJumper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +583,7 @@
 		};
 		BF70307422815D43000D45DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B418179DFFE7082571B4E6 /* Pods-ScriptJumper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

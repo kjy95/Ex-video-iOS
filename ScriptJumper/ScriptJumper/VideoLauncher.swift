@@ -93,8 +93,8 @@ class VideoPlayerView:UIView{
         self.backgroundColor = UIColor.gray
     }
     
-    func playVideoURL(url: NSURL){
-        player = AVPlayer(url: url as URL)
+    func playVideoURL(url: URL){
+        player = AVPlayer(url: url)
         
         let playerLayer = AVPlayerLayer(player: player)
         self.layer.addSublayer(playerLayer)
@@ -183,7 +183,7 @@ class VideoPlayerView:UIView{
         videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         //subtitle
-        let subtitle = SmiParser(subfileName: "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+)", ofType: "smi")
+        //let subtitle = SmiParser(subfileName: "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+)", ofType: "smi")
         
     }
     private func setupGradientLayer(){
@@ -199,7 +199,7 @@ class VideoPlayerView:UIView{
     
 }
 class VideoLauncher: NSObject {
-    func showVideoPlayer(url: NSURL){
+    func showVideoPlayer(url: URL){
         //nsurl??
         if let keyWindow = UIApplication.shared.keyWindow{
             let view = UIView(frame: keyWindow.frame)
