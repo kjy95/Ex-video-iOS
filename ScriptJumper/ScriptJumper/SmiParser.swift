@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 class SmiParser {
+    var clockList = [String]()
+    var onlySubtitleList: Array<String>?
     init(subfileName: String, ofType: String){
         let smiUtf8 = getEncodingSmiUtf8(forResource: subfileName, ofType: ofType)
         let timeList = getRegexArr(pattern:"(?<=<sync start=)[0-9]+(?=>)", string: smiUtf8)
+        setClockList(timeList: timeList)
         var subtitleListWithTag = getRegexArr(pattern:"(?<=<sync start=)[\\S\\s]+?(?=<sync start=|</body>)", string: smiUtf8)
-        var onlySubtitleList = subtitleListWithTag
+        onlySubtitleList = subtitleListWithTag
         //divide onlySubtitleList & subtitleListWithTag
         for i in Range(0...subtitleListWithTag.count-1){
             let subtitle = subtitleListWithTag[i]
@@ -22,10 +25,10 @@ class SmiParser {
                 let afterEqualsTo = String(subtitle.suffix(from: index))
                 subtitleListWithTag[i] = afterEqualsTo
             }
-            onlySubtitleList[i] = subtitleListWithTag[i].withoutHtml
+            onlySubtitleList![i] = subtitleListWithTag[i].withoutHtml
         }
         // Without Html Tag
-        printSubtitleWithTime(timeList: timeList, onlySubtitleList: onlySubtitleList)
+        printSubtitleWithTime(timeList: timeList, onlySubtitleList: onlySubtitleList!)
         // With Html Tag
         //printSubtitleWithTime(timeList: timeList, onlySubtitleList: subtitleList)
     }
@@ -54,6 +57,17 @@ class SmiParser {
                 let hours =  minutes / 60
                 let clock = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
                 print("\(clock)\n\(subtitle)")
+            }
+        }
+    }
+    func setClockList(timeList: Array<String>){
+        for time in timeList{
+            if let milliseconds = Int(time){
+                let seconds = milliseconds  / 1000 % 60
+                let minutes =  milliseconds  / 1000 / 60
+                let hours =  minutes / 60
+                let clock = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+                self.clockList.append(clock)
             }
         }
     }

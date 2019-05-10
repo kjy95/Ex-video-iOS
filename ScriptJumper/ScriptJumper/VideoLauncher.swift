@@ -12,7 +12,7 @@ import AVFoundation
 class VideoPlayerView:UIView{
     
     var player :AVPlayer?
-    
+    let subtitle = SmiParser(subfileName: "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+)", ofType: "smi")
     let activityIndicatorView: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: .whiteLarge)
         aiv.translatesAutoresizingMaskIntoConstraints = false
@@ -88,6 +88,12 @@ class VideoPlayerView:UIView{
         }
         isPlaying = !isPlaying
     }
+    let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        return label
+    }()
     override init(frame: CGRect){
         super.init(frame: frame)
         self.backgroundColor = UIColor.gray
@@ -110,8 +116,14 @@ class VideoPlayerView:UIView{
             let seconds = CMTimeGetSeconds(progressTime)
             let secondString = String(format: "%02d", Int(seconds) % 60)
             let minuteString = String(format: "%02d", Int(seconds / 60))
+            let timeString = String(format: "%02d", Int(seconds / 60)/60)
             self.currentTimeLabel.text = "\(minuteString):\(secondString)"
-            
+            for i in Range(0...self.subtitle.clockList.count-1){
+                if self.subtitle.clockList[i] == "\(timeString):\(minuteString):\(secondString)"{
+                    self.subtitleLabel.text = self.subtitle.onlySubtitleList![i]
+                    print(self.subtitle.onlySubtitleList![i])
+                }
+            }
             //move slider thumb
             if let duration = self.player?.currentItem?.duration{
                 let durationSecond = CMTimeGetSeconds(duration)
@@ -183,7 +195,13 @@ class VideoPlayerView:UIView{
         videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         //subtitle
-        //let subtitle = SmiParser(subfileName: "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+)", ofType: "smi")
+        controlsContainerView.addSubview(subtitleLabel)
+        subtitleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
+        subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
+        subtitleLabel.bottomAnchor.constraint(equalTo: videoLentghLabel.topAnchor).isActive = true
+        subtitleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        
         
     }
     private func setupGradientLayer(){

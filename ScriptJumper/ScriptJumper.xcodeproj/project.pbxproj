@@ -13,6 +13,7 @@
 		BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */; };
 		BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */; };
 		BF3B53DE22849BF00074AF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */; };
+		BF3B53E52285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53E42285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 */; };
 		BF70304B22815D42000D45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304A22815D42000D45DB /* AppDelegate.swift */; };
 		BF70304D22815D42000D45DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304C22815D42000D45DB /* ViewController.swift */; };
 		BF70305022815D42000D45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70304E22815D42000D45DB /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주.smi"; sourceTree = "<group>"; };
 		BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주 +일본어.smi"; sourceTree = "<group>"; };
 		BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF3B53E42285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4"; sourceTree = "<group>"; };
 		BF70304722815D42000D45DB /* ScriptJumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScriptJumper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF70304A22815D42000D45DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF70304C22815D42000D45DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BF70307E22815E7F000D45DB /* tokyoSkyTree.mp4 */,
+				BF3B53E42285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */,
 				BF3B53DA228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */,
 				BF70305822815D43000D45DB /* LaunchScreen.storyboard in Resources */,
+				BF3B53E52285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 in Resources */,
 				BF70305522815D43000D45DB /* Assets.xcassets in Resources */,
 				BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */,
 				BF70305022815D42000D45DB /* Main.storyboard in Resources */,
