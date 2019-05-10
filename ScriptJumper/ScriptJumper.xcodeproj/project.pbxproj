@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69DEB06F042C384F10B265FA /* Pods_ScriptJumper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2FA07C722DC48834ACC9F5 /* Pods_ScriptJumper.framework */; };
+		BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */; };
+		BF3B53DA228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */; };
+		BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */; };
+		BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */; };
+		BF3B53DE22849BF00074AF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */; };
+		BF3B53E52285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53E42285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 */; };
+		BF70304B22815D42000D45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304A22815D42000D45DB /* AppDelegate.swift */; };
+		BF70304D22815D42000D45DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70304C22815D42000D45DB /* ViewController.swift */; };
+		BF70305022815D42000D45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70304E22815D42000D45DB /* Main.storyboard */; };
+		BF70305322815D42000D45DB /* ScriptJumper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF70305122815D42000D45DB /* ScriptJumper.xcdatamodeld */; };
+		BF70305522815D43000D45DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF70305422815D43000D45DB /* Assets.xcassets */; };
+		BF70305822815D43000D45DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70305622815D43000D45DB /* LaunchScreen.storyboard */; };
+		BF70306322815D43000D45DB /* ScriptJumperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70306222815D43000D45DB /* ScriptJumperTests.swift */; };
+		BF70306E22815D43000D45DB /* ScriptJumperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70306D22815D43000D45DB /* ScriptJumperUITests.swift */; };
+		BF70307C22815D6D000D45DB /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70307B22815D6D000D45DB /* VideoLauncher.swift */; };
+		BF70307F22815ED9000D45DB /* tokyoSkyTree.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF70307E22815E7F000D45DB /* tokyoSkyTree.mp4 */; };
+		BF70308122816353000D45DB /* SmiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70308022816353000D45DB /* SmiParser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF70305F22815D43000D45DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF70303F22815D42000D45DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF70304622815D42000D45DB;
+			remoteInfo = ScriptJumper;
+		};
+		BF70306A22815D43000D45DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF70303F22815D42000D45DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF70304622815D42000D45DB;
+			remoteInfo = ScriptJumper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A2FA07C722DC48834ACC9F5 /* Pods_ScriptJumper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScriptJumper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi"; sourceTree = "<group>"; };
+		BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "저기..+제가+통화중이라+그런데...smi"; sourceTree = "<group>"; };
+		BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주.smi"; sourceTree = "<group>"; };
+		BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주 +일본어.smi"; sourceTree = "<group>"; };
+		BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF3B53E42285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4"; sourceTree = "<group>"; };
+		BF70304722815D42000D45DB /* ScriptJumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScriptJumper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF70304A22815D42000D45DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF70304C22815D42000D45DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF70304F22815D42000D45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF70305222815D42000D45DB /* ScriptJumper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScriptJumper.xcdatamodel; sourceTree = "<group>"; };
+		BF70305422815D43000D45DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF70305722815D43000D45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF70305922815D43000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF70305E22815D43000D45DB /* ScriptJumperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScriptJumperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF70306222815D43000D45DB /* ScriptJumperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptJumperTests.swift; sourceTree = "<group>"; };
+		BF70306422815D43000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF70306922815D43000D45DB /* ScriptJumperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScriptJumperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF70306D22815D43000D45DB /* ScriptJumperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptJumperUITests.swift; sourceTree = "<group>"; };
+		BF70306F22815D43000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF70307B22815D6D000D45DB /* VideoLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
+		BF70307E22815E7F000D45DB /* tokyoSkyTree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tokyoSkyTree.mp4; sourceTree = "<group>"; };
+		BF70308022816353000D45DB /* SmiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmiParser.swift; sourceTree = "<group>"; };
+		C6B418179DFFE7082571B4E6 /* Pods-ScriptJumper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScriptJumper.release.xcconfig"; path = "Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper.release.xcconfig"; sourceTree = "<group>"; };
+		EA64C606B6D31AE4A97980B5 /* Pods-ScriptJumper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScriptJumper.debug.xcconfig"; path = "Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF70304422815D42000D45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69DEB06F042C384F10B265FA /* Pods_ScriptJumper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF70305B22815D43000D45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF70306622815D43000D45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C87AA592B3B01A1C389097F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A2FA07C722DC48834ACC9F5 /* Pods_ScriptJumper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		489DC20A2191BDD173D03A0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA64C606B6D31AE4A97980B5 /* Pods-ScriptJumper.debug.xcconfig */,
+				C6B418179DFFE7082571B4E6 /* Pods-ScriptJumper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF3B53D4228420B80074AF3F /* smi file */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B53D5228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */,
+				BF3B53D6228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi */,
+				BF3B53D7228420B80074AF3F /* 조혜련과+태보의+저주.smi */,
+				BF3B53D8228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi */,
+			);
+			path = "smi file";
+			sourceTree = "<group>";
+		};
+		BF70303E22815D42000D45DB = {
+			isa = PBXGroup;
+			children = (
+				BF70304922815D42000D45DB /* ScriptJumper */,
+				BF70306122815D43000D45DB /* ScriptJumperTests */,
+				BF70306C22815D43000D45DB /* ScriptJumperUITests */,
+				BF70304822815D42000D45DB /* Products */,
+				489DC20A2191BDD173D03A0C /* Pods */,
+				3C87AA592B3B01A1C389097F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF70304822815D42000D45DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF70304722815D42000D45DB /* ScriptJumper.app */,
+				BF70305E22815D43000D45DB /* ScriptJumperTests.xctest */,
+				BF70306922815D43000D45DB /* ScriptJumperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF70304922815D42000D45DB /* ScriptJumper */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B53D4228420B80074AF3F /* smi file */,
+				BF70307D22815E5E000D45DB /* Resources */,
+				BF70304A22815D42000D45DB /* AppDelegate.swift */,
+				BF70304C22815D42000D45DB /* ViewController.swift */,
+				BF70304E22815D42000D45DB /* Main.storyboard */,
+				BF70305422815D43000D45DB /* Assets.xcassets */,
+				BF70305622815D43000D45DB /* LaunchScreen.storyboard */,
+				BF70305922815D43000D45DB /* Info.plist */,
+				BF3B53DD22849BF00074AF3F /* GoogleService-Info.plist */,
+				BF70305122815D42000D45DB /* ScriptJumper.xcdatamodeld */,
+				BF70307B22815D6D000D45DB /* VideoLauncher.swift */,
+				BF70308022816353000D45DB /* SmiParser.swift */,
+			);
+			path = ScriptJumper;
+			sourceTree = "<group>";
+		};
+		BF70306122815D43000D45DB /* ScriptJumperTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF70306222815D43000D45DB /* ScriptJumperTests.swift */,
+				BF70306422815D43000D45DB /* Info.plist */,
+			);
+			path = ScriptJumperTests;
+			sourceTree = "<group>";
+		};
+		BF70306C22815D43000D45DB /* ScriptJumperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF70306D22815D43000D45DB /* ScriptJumperUITests.swift */,
+				BF70306F22815D43000D45DB /* Info.plist */,
+			);
+			path = ScriptJumperUITests;
+			sourceTree = "<group>";
+		};
+		BF70307D22815E5E000D45DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF70307E22815E7F000D45DB /* tokyoSkyTree.mp4 */,
+				BF3B53E42285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF70304622815D42000D45DB /* ScriptJumper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF70307222815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumper" */;
+			buildPhases = (
+				2B8CD966AB0AAC95A9D3483D /* [CP] Check Pods Manifest.lock */,
+				BF70304322815D42000D45DB /* Sources */,
+				BF70304422815D42000D45DB /* Frameworks */,
+				BF70304522815D42000D45DB /* Resources */,
+				63391ABD048F8DCB12E395D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScriptJumper;
+			productName = ScriptJumper;
+			productReference = BF70304722815D42000D45DB /* ScriptJumper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF70305D22815D43000D45DB /* ScriptJumperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF70307522815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumperTests" */;
+			buildPhases = (
+				BF70305A22815D43000D45DB /* Sources */,
+				BF70305B22815D43000D45DB /* Frameworks */,
+				BF70305C22815D43000D45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF70306022815D43000D45DB /* PBXTargetDependency */,
+			);
+			name = ScriptJumperTests;
+			productName = ScriptJumperTests;
+			productReference = BF70305E22815D43000D45DB /* ScriptJumperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF70306822815D43000D45DB /* ScriptJumperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF70307822815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumperUITests" */;
+			buildPhases = (
+				BF70306522815D43000D45DB /* Sources */,
+				BF70306622815D43000D45DB /* Frameworks */,
+				BF70306722815D43000D45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF70306B22815D43000D45DB /* PBXTargetDependency */,
+			);
+			name = ScriptJumperUITests;
+			productName = ScriptJumperUITests;
+			productReference = BF70306922815D43000D45DB /* ScriptJumperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF70303F22815D42000D45DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "김지영";
+				TargetAttributes = {
+					BF70304622815D42000D45DB = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					BF70305D22815D43000D45DB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF70304622815D42000D45DB;
+					};
+					BF70306822815D43000D45DB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF70304622815D42000D45DB;
+					};
+				};
+			};
+			buildConfigurationList = BF70304222815D42000D45DB /* Build configuration list for PBXProject "ScriptJumper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF70303E22815D42000D45DB;
+			productRefGroup = BF70304822815D42000D45DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF70304622815D42000D45DB /* ScriptJumper */,
+				BF70305D22815D43000D45DB /* ScriptJumperTests */,
+				BF70306822815D43000D45DB /* ScriptJumperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF70304522815D42000D45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF70307F22815ED9000D45DB /* tokyoSkyTree.mp4 in Resources */,
+				BF3B53DC228420B80074AF3F /* 조혜련과+태보의+저주 +일본어.smi in Resources */,
+				BF3B53DA228420B80074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */,
+				BF70305822815D43000D45DB /* LaunchScreen.storyboard in Resources */,
+				BF3B53E52285E1E90074AF3F /* y2mate.com - ariana_grande_7_rings_cover_by_jfla_-tm4gC26VgA_1080p.mp4 in Resources */,
+				BF70305522815D43000D45DB /* Assets.xcassets in Resources */,
+				BF3B53D9228420B80074AF3F /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */,
+				BF70305022815D42000D45DB /* Main.storyboard in Resources */,
+				BF3B53DE22849BF00074AF3F /* GoogleService-Info.plist in Resources */,
+				BF3B53DB228420B80074AF3F /* 조혜련과+태보의+저주.smi in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF70305C22815D43000D45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF70306722815D43000D45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B8CD966AB0AAC95A9D3483D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScriptJumper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63391ABD048F8DCB12E395D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScriptJumper/Pods-ScriptJumper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF70304322815D42000D45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF70304D22815D42000D45DB /* ViewController.swift in Sources */,
+				BF70304B22815D42000D45DB /* AppDelegate.swift in Sources */,
+				BF70308122816353000D45DB /* SmiParser.swift in Sources */,
+				BF70305322815D42000D45DB /* ScriptJumper.xcdatamodeld in Sources */,
+				BF70307C22815D6D000D45DB /* VideoLauncher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF70305A22815D43000D45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF70306322815D43000D45DB /* ScriptJumperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF70306522815D43000D45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF70306E22815D43000D45DB /* ScriptJumperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF70306022815D43000D45DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF70304622815D42000D45DB /* ScriptJumper */;
+			targetProxy = BF70305F22815D43000D45DB /* PBXContainerItemProxy */;
+		};
+		BF70306B22815D43000D45DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF70304622815D42000D45DB /* ScriptJumper */;
+			targetProxy = BF70306A22815D43000D45DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF70304E22815D42000D45DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF70304F22815D42000D45DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF70305622815D43000D45DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF70305722815D43000D45DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF70307022815D43000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF70307122815D43000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF70307322815D43000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA64C606B6D31AE4A97980B5 /* Pods-ScriptJumper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = ScriptJumper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Y.ScriptJumper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF70307422815D43000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B418179DFFE7082571B4E6 /* Pods-ScriptJumper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = ScriptJumper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Y.ScriptJumper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF70307622815D43000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = ScriptJumperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Y.ScriptJumperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScriptJumper.app/ScriptJumper";
+			};
+			name = Debug;
+		};
+		BF70307722815D43000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = ScriptJumperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Y.ScriptJumperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScriptJumper.app/ScriptJumper";
+			};
+			name = Release;
+		};
+		BF70307922815D43000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = ScriptJumperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Y.ScriptJumperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScriptJumper;
+			};
+			name = Debug;
+		};
+		BF70307A22815D43000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = ScriptJumperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Y.ScriptJumperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScriptJumper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF70304222815D42000D45DB /* Build configuration list for PBXProject "ScriptJumper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF70307022815D43000D45DB /* Debug */,
+				BF70307122815D43000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF70307222815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF70307322815D43000D45DB /* Debug */,
+				BF70307422815D43000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF70307522815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF70307622815D43000D45DB /* Debug */,
+				BF70307722815D43000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF70307822815D43000D45DB /* Build configuration list for PBXNativeTarget "ScriptJumperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF70307922815D43000D45DB /* Debug */,
+				BF70307A22815D43000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF70305122815D42000D45DB /* ScriptJumper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF70305222815D42000D45DB /* ScriptJumper.xcdatamodel */,
+			);
+			currentVersion = BF70305222815D42000D45DB /* ScriptJumper.xcdatamodel */;
+			path = ScriptJumper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF70303F22815D42000D45DB /* Project object */;
+}

@@ -56,7 +56,6 @@ class VideoPlayerView:UIView{
         return slider
     }()
     @objc func handleSliderChange(){
-        print(videoSlider.value)
         if let duration = player?.currentItem?.duration{
             let totalSeconds = CMTimeGetSeconds(duration)
             let value = Float64(videoSlider.value) * totalSeconds

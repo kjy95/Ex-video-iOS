@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF3B53D32282BF1B0074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */ = {isa = PBXBuildFile; fileRef = BF3B53D22282BF1B0074AF3F /* 저기..+제가+통화중이라+그런데...smi */; };
+		BF7030CC22816690000D45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7030CB22816690000D45DB /* AppDelegate.swift */; };
+		BF7030CE22816690000D45DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7030CD22816690000D45DB /* ViewController.swift */; };
+		BF7030D122816690000D45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7030CF22816690000D45DB /* Main.storyboard */; };
+		BF7030D422816690000D45DB /* smi_parser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF7030D222816690000D45DB /* smi_parser.xcdatamodeld */; };
+		BF7030D622816692000D45DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7030D522816692000D45DB /* Assets.xcassets */; };
+		BF7030D922816692000D45DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7030D722816692000D45DB /* LaunchScreen.storyboard */; };
+		BF7030E422816692000D45DB /* smi_parserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7030E322816692000D45DB /* smi_parserTests.swift */; };
+		BF7030EF22816692000D45DB /* smi_parserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7030EE22816692000D45DB /* smi_parserUITests.swift */; };
+		BF7030FE2281964C000D45DB /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */ = {isa = PBXBuildFile; fileRef = BF7030FD2281964C000D45DB /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */; };
+		BF7031002282BB20000D45DB /* 조혜련과+태보의+저주.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF7030FF2282BB20000D45DB /* 조혜련과+태보의+저주.smi */; };
+		BF7031022282BB9D000D45DB /* 조혜련과+태보의+저주 +일본어.smi in Resources */ = {isa = PBXBuildFile; fileRef = BF7031012282BB9D000D45DB /* 조혜련과+태보의+저주 +일본어.smi */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF7030E022816692000D45DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7030C022816690000D45DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7030C722816690000D45DB;
+			remoteInfo = "smi parser";
+		};
+		BF7030EB22816692000D45DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7030C022816690000D45DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7030C722816690000D45DB;
+			remoteInfo = "smi parser";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF3B53D22282BF1B0074AF3F /* 저기..+제가+통화중이라+그런데...smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "저기..+제가+통화중이라+그런데...smi"; sourceTree = "<group>"; };
+		BF7030C822816690000D45DB /* smi parser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smi parser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7030CB22816690000D45DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF7030CD22816690000D45DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF7030D022816690000D45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF7030D322816690000D45DB /* smi_parser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = smi_parser.xcdatamodel; sourceTree = "<group>"; };
+		BF7030D522816692000D45DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF7030D822816692000D45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF7030DA22816692000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7030DF22816692000D45DB /* smi parserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "smi parserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7030E322816692000D45DB /* smi_parserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smi_parserTests.swift; sourceTree = "<group>"; };
+		BF7030E522816692000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7030EA22816692000D45DB /* smi parserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "smi parserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7030EE22816692000D45DB /* smi_parserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smi_parserUITests.swift; sourceTree = "<group>"; };
+		BF7030F022816692000D45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7030FD2281964C000D45DB /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi"; sourceTree = "<group>"; };
+		BF7030FF2282BB20000D45DB /* 조혜련과+태보의+저주.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주.smi"; sourceTree = "<group>"; };
+		BF7031012282BB9D000D45DB /* 조혜련과+태보의+저주 +일본어.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "조혜련과+태보의+저주 +일본어.smi"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF7030C522816690000D45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7030DC22816692000D45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7030E722816692000D45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF7030BF22816690000D45DB = {
+			isa = PBXGroup;
+			children = (
+				BF7030CA22816690000D45DB /* smi parser */,
+				BF7030E222816692000D45DB /* smi parserTests */,
+				BF7030ED22816692000D45DB /* smi parserUITests */,
+				BF7030C922816690000D45DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF7030C922816690000D45DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF7030C822816690000D45DB /* smi parser.app */,
+				BF7030DF22816692000D45DB /* smi parserTests.xctest */,
+				BF7030EA22816692000D45DB /* smi parserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF7030CA22816690000D45DB /* smi parser */ = {
+			isa = PBXGroup;
+			children = (
+				BF7030FC22818ED8000D45DB /* smi file */,
+				BF7030CB22816690000D45DB /* AppDelegate.swift */,
+				BF7030CD22816690000D45DB /* ViewController.swift */,
+				BF7030CF22816690000D45DB /* Main.storyboard */,
+				BF7030D522816692000D45DB /* Assets.xcassets */,
+				BF7030D722816692000D45DB /* LaunchScreen.storyboard */,
+				BF7030DA22816692000D45DB /* Info.plist */,
+				BF7030D222816690000D45DB /* smi_parser.xcdatamodeld */,
+			);
+			path = "smi parser";
+			sourceTree = "<group>";
+		};
+		BF7030E222816692000D45DB /* smi parserTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF7030E322816692000D45DB /* smi_parserTests.swift */,
+				BF7030E522816692000D45DB /* Info.plist */,
+			);
+			path = "smi parserTests";
+			sourceTree = "<group>";
+		};
+		BF7030ED22816692000D45DB /* smi parserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF7030EE22816692000D45DB /* smi_parserUITests.swift */,
+				BF7030F022816692000D45DB /* Info.plist */,
+			);
+			path = "smi parserUITests";
+			sourceTree = "<group>";
+		};
+		BF7030FC22818ED8000D45DB /* smi file */ = {
+			isa = PBXGroup;
+			children = (
+				BF7030FD2281964C000D45DB /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi */,
+				BF7030FF2282BB20000D45DB /* 조혜련과+태보의+저주.smi */,
+				BF7031012282BB9D000D45DB /* 조혜련과+태보의+저주 +일본어.smi */,
+				BF3B53D22282BF1B0074AF3F /* 저기..+제가+통화중이라+그런데...smi */,
+			);
+			path = "smi file";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF7030C722816690000D45DB /* smi parser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7030F322816692000D45DB /* Build configuration list for PBXNativeTarget "smi parser" */;
+			buildPhases = (
+				BF7030C422816690000D45DB /* Sources */,
+				BF7030C522816690000D45DB /* Frameworks */,
+				BF7030C622816690000D45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "smi parser";
+			productName = "smi parser";
+			productReference = BF7030C822816690000D45DB /* smi parser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF7030DE22816692000D45DB /* smi parserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7030F622816692000D45DB /* Build configuration list for PBXNativeTarget "smi parserTests" */;
+			buildPhases = (
+				BF7030DB22816692000D45DB /* Sources */,
+				BF7030DC22816692000D45DB /* Frameworks */,
+				BF7030DD22816692000D45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF7030E122816692000D45DB /* PBXTargetDependency */,
+			);
+			name = "smi parserTests";
+			productName = "smi parserTests";
+			productReference = BF7030DF22816692000D45DB /* smi parserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF7030E922816692000D45DB /* smi parserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7030F922816692000D45DB /* Build configuration list for PBXNativeTarget "smi parserUITests" */;
+			buildPhases = (
+				BF7030E622816692000D45DB /* Sources */,
+				BF7030E722816692000D45DB /* Frameworks */,
+				BF7030E822816692000D45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF7030EC22816692000D45DB /* PBXTargetDependency */,
+			);
+			name = "smi parserUITests";
+			productName = "smi parserUITests";
+			productReference = BF7030EA22816692000D45DB /* smi parserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF7030C022816690000D45DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "김지영";
+				TargetAttributes = {
+					BF7030C722816690000D45DB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BF7030DE22816692000D45DB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF7030C722816690000D45DB;
+					};
+					BF7030E922816692000D45DB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF7030C722816690000D45DB;
+					};
+				};
+			};
+			buildConfigurationList = BF7030C322816690000D45DB /* Build configuration list for PBXProject "smi parser" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF7030BF22816690000D45DB;
+			productRefGroup = BF7030C922816690000D45DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF7030C722816690000D45DB /* smi parser */,
+				BF7030DE22816692000D45DB /* smi parserTests */,
+				BF7030E922816692000D45DB /* smi parserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF7030C622816690000D45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7030D922816692000D45DB /* LaunchScreen.storyboard in Resources */,
+				BF7030D622816692000D45DB /* Assets.xcassets in Resources */,
+				BF7031002282BB20000D45DB /* 조혜련과+태보의+저주.smi in Resources */,
+				BF7031022282BB9D000D45DB /* 조혜련과+태보의+저주 +일본어.smi in Resources */,
+				BF7030FE2281964C000D45DB /* Ariana+Grande+-+7+rings+(+cover+by+J.Fla+).smi in Resources */,
+				BF7030D122816690000D45DB /* Main.storyboard in Resources */,
+				BF3B53D32282BF1B0074AF3F /* 저기..+제가+통화중이라+그런데...smi in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7030DD22816692000D45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7030E822816692000D45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF7030C422816690000D45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7030CE22816690000D45DB /* ViewController.swift in Sources */,
+				BF7030D422816690000D45DB /* smi_parser.xcdatamodeld in Sources */,
+				BF7030CC22816690000D45DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7030DB22816692000D45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7030E422816692000D45DB /* smi_parserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7030E622816692000D45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7030EF22816692000D45DB /* smi_parserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF7030E122816692000D45DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7030C722816690000D45DB /* smi parser */;
+			targetProxy = BF7030E022816692000D45DB /* PBXContainerItemProxy */;
+		};
+		BF7030EC22816692000D45DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7030C722816690000D45DB /* smi parser */;
+			targetProxy = BF7030EB22816692000D45DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF7030CF22816690000D45DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7030D022816690000D45DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF7030D722816692000D45DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7030D822816692000D45DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF7030F122816692000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF7030F222816692000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF7030F422816692000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "smi parser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.smi-parser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF7030F522816692000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "smi parser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.smi-parser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF7030F722816692000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "smi parserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.smi-parserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smi parser.app/smi parser";
+			};
+			name = Debug;
+		};
+		BF7030F822816692000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "smi parserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.smi-parserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smi parser.app/smi parser";
+			};
+			name = Release;
+		};
+		BF7030FA22816692000D45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "smi parserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.smi-parserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "smi parser";
+			};
+			name = Debug;
+		};
+		BF7030FB22816692000D45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "smi parserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.smi-parserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "smi parser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF7030C322816690000D45DB /* Build configuration list for PBXProject "smi parser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7030F122816692000D45DB /* Debug */,
+				BF7030F222816692000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7030F322816692000D45DB /* Build configuration list for PBXNativeTarget "smi parser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7030F422816692000D45DB /* Debug */,
+				BF7030F522816692000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7030F622816692000D45DB /* Build configuration list for PBXNativeTarget "smi parserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7030F722816692000D45DB /* Debug */,
+				BF7030F822816692000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7030F922816692000D45DB /* Build configuration list for PBXNativeTarget "smi parserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7030FA22816692000D45DB /* Debug */,
+				BF7030FB22816692000D45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF7030D222816690000D45DB /* smi_parser.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF7030D322816690000D45DB /* smi_parser.xcdatamodel */,
+			);
+			currentVersion = BF7030D322816690000D45DB /* smi_parser.xcdatamodel */;
+			path = smi_parser.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF7030C022816690000D45DB /* Project object */;
+}
