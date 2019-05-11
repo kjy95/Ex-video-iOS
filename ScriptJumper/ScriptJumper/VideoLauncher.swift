@@ -92,6 +92,7 @@ class VideoPlayerView:UIView{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
+        label.textAlignment = .center
         return label
     }()
     override init(frame: CGRect){
@@ -120,8 +121,9 @@ class VideoPlayerView:UIView{
             self.currentTimeLabel.text = "\(minuteString):\(secondString)"
             for i in Range(0...self.subtitle.clockList.count-1){
                 if self.subtitle.clockList[i] == "\(timeString):\(minuteString):\(secondString)"{
-                    self.subtitleLabel.text = self.subtitle.onlySubtitleList![i]
-                    print(self.subtitle.onlySubtitleList![i])
+                    self.subtitleLabel.text = self.subtitle.subtitleListWithTag![i]
+                    self.subtitleLabel.numberOfLines = 0
+                    print(self.subtitle.subtitleListWithTag![i])
                 }
             }
             //move slider thumb
@@ -196,12 +198,10 @@ class VideoPlayerView:UIView{
         
         //subtitle
         controlsContainerView.addSubview(subtitleLabel)
-        subtitleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
-        subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
+        subtitleLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         subtitleLabel.bottomAnchor.constraint(equalTo: videoLentghLabel.topAnchor).isActive = true
-        subtitleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        
+        subtitleLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         
     }
     private func setupGradientLayer(){
