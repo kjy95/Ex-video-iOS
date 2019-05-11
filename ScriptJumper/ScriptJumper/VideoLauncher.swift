@@ -90,9 +90,10 @@ class VideoPlayerView:UIView{
     }
     let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         return label
     }()
     override init(frame: CGRect){
@@ -121,8 +122,13 @@ class VideoPlayerView:UIView{
             self.currentTimeLabel.text = "\(minuteString):\(secondString)"
             for i in Range(0...self.subtitle.clockList.count-1){
                 if self.subtitle.clockList[i] == "\(timeString):\(minuteString):\(secondString)"{
-                    self.subtitleLabel.text = self.subtitle.subtitleListWithTag![i]
-                    self.subtitleLabel.numberOfLines = 0
+                    self.subtitleLabel.attributedText = self.subtitle.subtitleListWithTag![i].htmlAttributedString()
+                    self.subtitleLabel.textAlignment = .center
+                    self.subtitleLabel.textColor = .white
+                    self.subtitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+                    self.subtitleLabel.backgroundColor = UIColor(white: 000, alpha: 0.5)
+                    //self.subtitleLabel.numberOfLines = 0
+                    
                     print(self.subtitle.subtitleListWithTag![i])
                 }
             }
@@ -232,5 +238,15 @@ class VideoLauncher: NSObject {
             
         }
         
+    }
+}
+extension String {
+    func htmlAttributedString() -> NSAttributedString? {
+        guard let data = self.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
+        guard let html = try? NSMutableAttributedString(
+            data: data,
+            options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html],
+            documentAttributes: nil) else { return nil }
+        return html
     }
 }
