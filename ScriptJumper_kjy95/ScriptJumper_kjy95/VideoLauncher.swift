@@ -12,7 +12,7 @@ import AVFoundation
 class VideoPlayerView:UIView{
     
     var player :AVPlayer?
-    let subtitle = SmiParser(subfileName: "Ariana+Grande+-+7+rings+(+cover+by+J.Fla+)", ofType: "smi")
+    var subtitle: SmiParser!
     let activityIndicatorView: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: .whiteLarge)
         aiv.translatesAutoresizingMaskIntoConstraints = false
@@ -67,6 +67,25 @@ class VideoPlayerView:UIView{
         }
         
     }
+    lazy var backButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = UIImage(named: "back")
+        button.setImage(image, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
+        return button
+    }()
+    @objc func handleBack(){
+        
+        print("asdf")
+        
+        let window = UIApplication.shared.keyWindow!
+        if let view = window.viewWithTag(100) {
+            view.removeFromSuperview()
+        }
+        print("asdf")
+    }
     lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
@@ -77,6 +96,7 @@ class VideoPlayerView:UIView{
         button.isHidden = true
         return button
     }()
+    
     var isPlaying = true
     @objc func handlePause(){
         if isPlaying{
@@ -101,7 +121,7 @@ class VideoPlayerView:UIView{
         self.backgroundColor = UIColor.gray
     }
     
-    func playVideoURL(url: URL){
+    func playVideoURL(url: URL, jumpTime: String){
         player = AVPlayer(url: url)
         
         let playerLayer = AVPlayerLayer(player: player)
@@ -112,6 +132,27 @@ class VideoPlayerView:UIView{
         player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
         
         setIndicatorViewOnCenterAndButton()
+            
+        let timeList = jumpTime.split(separator: ":")
+            
+        var seconds = 0
+        if let hour = Int(timeList[0]){
+            seconds = hour*60*60
+        }
+        if let min = Int(timeList[1]){
+            seconds += min*60
+        }
+        if let sec = Int(timeList[2]){
+            seconds += sec
+        }
+            
+        self.videoSlider.value = Float(seconds/Int(self.videoSlider.maximumValue))
+            
+            
+        let seekTime = CMTime(value: Int64(seconds), timescale: 1)
+            player?.seek(to: seekTime)
+            
+        
         
         let interval = CMTime(value: 1, timescale: 2)
         player?.addPeriodicTimeObserver(forInterval: interval, queue: .main, using: { (progressTime) in
@@ -120,6 +161,7 @@ class VideoPlayerView:UIView{
             let minuteString = String(format: "%02d", Int(seconds / 60))
             let timeString = String(format: "%02d", Int(seconds / 60)/60)
             self.currentTimeLabel.text = "\(minuteString):\(secondString)"
+            // subtitle
             for i in Range(0...self.subtitle.clockList.count-1){
                 if self.subtitle.clockList[i] == "\(timeString):\(minuteString):\(secondString)"{
                     self.subtitleLabel.attributedText = self.subtitle.subtitleListWithTag![i].htmlAttributedString()
@@ -127,11 +169,11 @@ class VideoPlayerView:UIView{
                     self.subtitleLabel.textColor = .white
                     self.subtitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
                     self.subtitleLabel.backgroundColor = UIColor(white: 000, alpha: 0.5)
-                    //self.subtitleLabel.numberOfLines = 0
                     
                     print(self.subtitle.subtitleListWithTag![i])
                 }
             }
+
             //move slider thumb
             if let duration = self.player?.currentItem?.duration{
                 let durationSecond = CMTimeGetSeconds(duration)
@@ -155,8 +197,9 @@ class VideoPlayerView:UIView{
                 
                 let seconds = CMTimeGetSeconds(duration)
                 let secondsText = String(format:"%02d", Int(seconds) % 60)
-                let minutesText = String(format:"%02d", Int(seconds) / 60)
-                videoLentghLabel.text = "\(minutesText):\(secondsText)"
+                let minutesText = String(format:"%02d", Int(seconds) / 60 % 60 )
+                let hoursText = String(format:"%02d", Int(seconds) / 60 / 60)
+                videoLentghLabel.text = "\(hoursText):\(minutesText):\(secondsText)"
                 
             }
             
@@ -186,13 +229,13 @@ class VideoPlayerView:UIView{
         controlsContainerView.addSubview(videoLentghLabel)
         videoLentghLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
         videoLentghLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3).isActive = true
-        videoLentghLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        videoLentghLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
         videoLentghLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         controlsContainerView.addSubview(currentTimeLabel)
         currentTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
         currentTimeLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3).isActive = true
-        currentTimeLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        currentTimeLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
         currentTimeLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         //slider
@@ -209,6 +252,14 @@ class VideoPlayerView:UIView{
         subtitleLabel.bottomAnchor.constraint(equalTo: videoLentghLabel.topAnchor).isActive = true
         subtitleLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         
+        //backbutton
+        controlsContainerView.addSubview(backButton)
+        backButton.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        backButton.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        backButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
     }
     private func setupGradientLayer(){
         let gradientLayer = CAGradientLayer()
@@ -223,18 +274,28 @@ class VideoPlayerView:UIView{
     
 }
 class VideoLauncher: NSObject {
-    func showVideoPlayer(url: URL){
+    
+    var parser: SmiParser?
+    
+    func showVideoPlayer(url: URL,jumperTime: String){
         //nsurl??
         if let keyWindow = UIApplication.shared.keyWindow{
             let view = UIView(frame: keyWindow.frame)
+            view.tag = 100
             view.backgroundColor = UIColor.black
-            //
             let height = keyWindow.frame.width * 9 / 16
             let videoPlayerFrame = CGRect(x: 0, y: 0, width: keyWindow.frame.width, height: height)
             let videoPlayerView = VideoPlayerView(frame: videoPlayerFrame)
-            videoPlayerView.playVideoURL(url: url)
+            
+            if let subtitle = parser {
+                videoPlayerView.subtitle = subtitle
+                videoPlayerView.playVideoURL(url: url, jumpTime: jumperTime)
+            }
+            
+            
             view.addSubview(videoPlayerView)
             keyWindow.addSubview(view)
+            
             
         }
         
@@ -250,3 +311,4 @@ extension String {
         return html
     }
 }
+ 

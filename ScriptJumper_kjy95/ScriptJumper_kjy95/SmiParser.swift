@@ -12,6 +12,7 @@ class SmiParser {
     var clockList = [String]()
     var onlySubtitleList: Array<String>?
     var subtitleListWithTag: Array<String>?
+    var subtitleLabelList = [String]()
     init(subfileName: String, ofType: String){
         let smiUtf8 = getEncodingSmiUtf8(forResource: subfileName, ofType: ofType)
         
@@ -30,17 +31,30 @@ class SmiParser {
             }
             onlySubtitleList![i] = subtitleListWithTag![i].withoutHtml
         }
+        setLabelList(timeList: timeList, onlySubtitleList: onlySubtitleList!)
         // Without Html Tag
         //printSubtitleWithTime(timeList: timeList, onlySubtitleList: onlySubtitleList!)
         // With Html Tag
         //printSubtitleWithTime(timeList: timeList, onlySubtitleList: subtitleList)
     }
+    func fileRead(_ url: URL?, encoding: String.Encoding = .utf8) -> String {
+        guard let url = url else { return "" }
+        guard let content = try? String(contentsOf: url, encoding: encoding) else { return "" }
+        
+        return content
+    }
     func getEncodingSmiUtf8(forResource: String, ofType: String)->String{
         var text : String!
         let path = Bundle.main.path(forResource: forResource, ofType: ofType) // file
         do {
-            text = try String(contentsOfFile: path!, encoding: .utf8)
-        }
+            let encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(0x0422))
+            
+            
+            text = try String(contentsOfFile: path!, encoding: encoding)
+            //text = try String(contentsOfFile: path!, encoding: .utf8)
+            
+            
+        }//0317842580
         catch(_){print("error")}
         return text
     }
@@ -63,6 +77,18 @@ class SmiParser {
             }
         }
     }
+    func setLabelList(timeList: Array<String>, onlySubtitleList: Array<String>){
+        for (time, subtitle) in zip(timeList, onlySubtitleList){
+            if let milliseconds = Int(time){
+                let seconds = milliseconds  / 1000 % 60
+                let minutes =  milliseconds  / 1000 / 60
+                let hours =  minutes / 60
+                let clock = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+                subtitleLabelList.append("\(clock)\n\(subtitle)")
+            }
+        }
+    }
+    
     func setClockList(timeList: Array<String>){
         for time in timeList{
             if let milliseconds = Int(time){
