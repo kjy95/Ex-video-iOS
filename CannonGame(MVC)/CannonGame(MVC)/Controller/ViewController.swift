@@ -16,22 +16,22 @@ class ViewController: UIViewController, CannonControlViewDelegate {
     var cannonBallViews = [Int:UIView]()
     
     //MARK: Model
-    var cannonBallModels : [CannonBallModel]()
-    
+    var cannonBallModels = [CannonBallModel]()
+    var cannonStructModel : CannonStructModel?
     //MARK: value
     var key : Int = 0
     var timer : Timer = Timer()
     var potentialCannonSpeed : CGFloat = 10
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        
         
         //delegate
         cannonControlView.delegate = self
         
         //init cannonModel
-        gameModel?.cannonStructModel = CannonStructModel.init(currentLoc: cannonFieldView.cannon.center, frame: cannonFieldView.commonBall.frame)
-        gameModel?.cannonStructModel?.updateCannonVector(radian: CGFloat.pi/2, speed: potentialCannonSpeed)
+        cannonStructModel = CannonStructModel.init(currentLoc: cannonFieldView.cannon.center, frame: cannonFieldView.commonBall.frame)
+        cannonStructModel?.updateCannonVector(radian: CGFloat.pi/2, speed: potentialCannonSpeed)
         //view init
         cannonFieldView.cannonFieldInit()
         
@@ -50,14 +50,14 @@ class ViewController: UIViewController, CannonControlViewDelegate {
         switch type {
             
         case "triangle":
-            gameModel?.cannonStructModel?.type = type
+            cannonStructModel?.type = type
             cannonFieldView.showChangeCannonBallType(type: type)
         case "circle":
-            gameModel?.cannonStructModel?.type = type
+            cannonStructModel?.type = type
             cannonFieldView.showChangeCannonBallType(type: type)
             
         case "rectangle":
-            gameModel?.cannonStructModel?.type = type
+            cannonStructModel?.type = type
             cannonFieldView.showChangeCannonBallType(type: type)
         default:
             print("default")
@@ -71,7 +71,7 @@ class ViewController: UIViewController, CannonControlViewDelegate {
         let radian = sliderValueToRadian(sliderValue: sliderValue)
         
         //Model update : 대포, 포탄 라디안 업데이트
-        gameModel?.cannonStructModel?.updateCannonVector(radian: radian, speed: potentialCannonSpeed)
+        cannonStructModel?.updateCannonVector(radian: radian, speed: potentialCannonSpeed)
         
         //View update : cannonStructView rotate
         cannonFieldView.roateCannonStruct(radian: radian)
@@ -92,9 +92,9 @@ class ViewController: UIViewController, CannonControlViewDelegate {
     //tap fire
     func fireCannonBall(){
         //define value
-        let currentCannonLoc = gameModel?.cannonStructModel?.currentLoc ?? CGPoint(x: 0, y: 0)
-        let cannonVector = gameModel?.cannonStructModel?.vector ?? CGVector(dx: 0, dy: 0)
-        let radian = gameModel?.cannonStructModel?.radian ?? 0 
+        let currentCannonLoc = cannonStructModel?.currentLoc ?? CGPoint(x: 0, y: 0)
+        let cannonVector = cannonStructModel?.vector ?? CGVector(dx: 0, dy: 0)
+        let radian = cannonStructModel?.radian ?? 0
         key += 1
         //key값이 커졌을 때 0으로 초기화
         if key == Int.max{
@@ -104,13 +104,13 @@ class ViewController: UIViewController, CannonControlViewDelegate {
         let cannonBallModel = CannonBallModel(currentLoc: currentCannonLoc, vector: cannonVector, key: key, radian: radian)
         
         //update model
-        gameModel?.cannonBallModel?.append(cannonBallModel)
+        cannonBallModels.append(cannonBallModel)
         
         //make view
         var cannonBallView = CannonBallView()
         
-        let type = gameModel?.cannonStructModel?.type
-        let frame = gameModel?.cannonStructModel?.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+        let type = cannonStructModel?.type
+        let frame = cannonStructModel?.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0)
         
         switch type {
             case "rectangle":
@@ -136,17 +136,12 @@ class ViewController: UIViewController, CannonControlViewDelegate {
     //timer
     @objc func changeCannonBallPosition(){
         
-        if let cannonBallModels = gameModel?.cannonBallModel{
-            for index in 0..<cannonBallModels.count{
-                let willRemove = moveOrRemove(cannonBallModel: cannonBallModels[index])
-                if willRemove{
-                   // gameModel?.cannonBallModel?.remove(at: index)
-                }
-            }
+        for cannonBallModel in cannonBallModels{
+            moveOrRemove(cannonBallModel: cannonBallModel)
         }
     }
     
-    func moveOrRemove(cannonBallModel : CannonBallModel)->Bool{
+    func moveOrRemove(cannonBallModel : CannonBallModel){
         cannonBallModel.moveCannonBall()
         cannonBallViews[cannonBallModel.key]?.center = cannonBallModel.position
         //수퍼뷰 관점에서 포탄 위치
@@ -155,12 +150,14 @@ class ViewController: UIViewController, CannonControlViewDelegate {
         //화면 밖으로 나가면
         if currentBallLoc.x <= 0 || currentBallLoc.x >= ((self.view.frame.maxX) + CGFloat(0))  || currentBallLoc.y <= 0 {
             print("제거")
+            //model 제거
+            cannonBallModels.remove(at: index)
+            
+            //cannonBallModels.filter { $0 != cannonBallModel }
+            //
             //view 제거
             cannonBallViews[cannonBallModel.key]?.removeFromSuperview()
             cannonBallViews.removeValue(forKey: cannonBallModel.key)
-            return true
-        }else{
-            return false
         }
     }
     
