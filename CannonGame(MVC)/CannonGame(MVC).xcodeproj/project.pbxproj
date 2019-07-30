@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF25386822EF22E20093F977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25386722EF22E20093F977 /* AppDelegate.swift */; };
+		BF25386A22EF22E20093F977 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25386922EF22E20093F977 /* ViewController.swift */; };
+		BF25386D22EF22E20093F977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF25386B22EF22E20093F977 /* Main.storyboard */; };
+		BF25386F22EF22E50093F977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF25386E22EF22E50093F977 /* Assets.xcassets */; };
+		BF25387222EF22E50093F977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF25387022EF22E50093F977 /* LaunchScreen.storyboard */; };
+		BF25387F22EF24720093F977 /* CannonStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25387E22EF24720093F977 /* CannonStructModel.swift */; };
+		BF25388122EF247B0093F977 /* CannonBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25388022EF247B0093F977 /* CannonBallModel.swift */; };
+		BF25388322EF24990093F977 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25388222EF24990093F977 /* TriangleView.swift */; };
+		BF25388522EF24E50093F977 /* CannonBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25388422EF24E50093F977 /* CannonBallView.swift */; };
+		BF25388722EF267E0093F977 /* CannonControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25388622EF267E0093F977 /* CannonControlView.swift */; };
+		BF25388922EFE0DB0093F977 /* EnemyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25388822EFE0DB0093F977 /* EnemyModel.swift */; };
+		BF25388D22F007480093F977 /* CannonFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25388C22F007480093F977 /* CannonFieldView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF25386422EF22E20093F977 /* CannonGame(MVC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CannonGame(MVC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF25386722EF22E20093F977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF25386922EF22E20093F977 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF25386C22EF22E20093F977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF25386E22EF22E50093F977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF25387122EF22E50093F977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF25387322EF22E50093F977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF25387E22EF24720093F977 /* CannonStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonStructModel.swift; sourceTree = "<group>"; };
+		BF25388022EF247B0093F977 /* CannonBallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonBallModel.swift; sourceTree = "<group>"; };
+		BF25388222EF24990093F977 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		BF25388422EF24E50093F977 /* CannonBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonBallView.swift; sourceTree = "<group>"; };
+		BF25388622EF267E0093F977 /* CannonControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonControlView.swift; sourceTree = "<group>"; };
+		BF25388822EFE0DB0093F977 /* EnemyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyModel.swift; sourceTree = "<group>"; };
+		BF25388C22F007480093F977 /* CannonFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonFieldView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF25386122EF22E20093F977 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF25385B22EF22E20093F977 = {
+			isa = PBXGroup;
+			children = (
+				BF25386622EF22E20093F977 /* CannonGame(MVC) */,
+				BF25386522EF22E20093F977 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF25386522EF22E20093F977 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF25386422EF22E20093F977 /* CannonGame(MVC).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF25386622EF22E20093F977 /* CannonGame(MVC) */ = {
+			isa = PBXGroup;
+			children = (
+				BF25387B22EF23AA0093F977 /* Controller */,
+				BF25387A22EF23A10093F977 /* View */,
+				BF25387922EF238F0093F977 /* Model */,
+				BF25386722EF22E20093F977 /* AppDelegate.swift */,
+				BF25386B22EF22E20093F977 /* Main.storyboard */,
+				BF25386E22EF22E50093F977 /* Assets.xcassets */,
+				BF25387022EF22E50093F977 /* LaunchScreen.storyboard */,
+				BF25387322EF22E50093F977 /* Info.plist */,
+			);
+			path = "CannonGame(MVC)";
+			sourceTree = "<group>";
+		};
+		BF25387922EF238F0093F977 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF25387E22EF24720093F977 /* CannonStructModel.swift */,
+				BF25388022EF247B0093F977 /* CannonBallModel.swift */,
+				BF25388822EFE0DB0093F977 /* EnemyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF25387A22EF23A10093F977 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF25388C22F007480093F977 /* CannonFieldView.swift */,
+				BF25388222EF24990093F977 /* TriangleView.swift */,
+				BF25388622EF267E0093F977 /* CannonControlView.swift */,
+				BF25388422EF24E50093F977 /* CannonBallView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF25387B22EF23AA0093F977 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF25386922EF22E20093F977 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF25386322EF22E20093F977 /* CannonGame(MVC) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF25387622EF22E50093F977 /* Build configuration list for PBXNativeTarget "CannonGame(MVC)" */;
+			buildPhases = (
+				BF25386022EF22E20093F977 /* Sources */,
+				BF25386122EF22E20093F977 /* Frameworks */,
+				BF25386222EF22E20093F977 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CannonGame(MVC)";
+			productName = "CannonGame(MVC)";
+			productReference = BF25386422EF22E20093F977 /* CannonGame(MVC).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF25385C22EF22E20093F977 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "김지영";
+				TargetAttributes = {
+					BF25386322EF22E20093F977 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = BF25385F22EF22E20093F977 /* Build configuration list for PBXProject "CannonGame(MVC)" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF25385B22EF22E20093F977;
+			productRefGroup = BF25386522EF22E20093F977 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF25386322EF22E20093F977 /* CannonGame(MVC) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF25386222EF22E20093F977 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF25387222EF22E50093F977 /* LaunchScreen.storyboard in Resources */,
+				BF25386F22EF22E50093F977 /* Assets.xcassets in Resources */,
+				BF25386D22EF22E20093F977 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF25386022EF22E20093F977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF25388722EF267E0093F977 /* CannonControlView.swift in Sources */,
+				BF25388522EF24E50093F977 /* CannonBallView.swift in Sources */,
+				BF25388D22F007480093F977 /* CannonFieldView.swift in Sources */,
+				BF25386A22EF22E20093F977 /* ViewController.swift in Sources */,
+				BF25386822EF22E20093F977 /* AppDelegate.swift in Sources */,
+				BF25388922EFE0DB0093F977 /* EnemyModel.swift in Sources */,
+				BF25388122EF247B0093F977 /* CannonBallModel.swift in Sources */,
+				BF25388322EF24990093F977 /* TriangleView.swift in Sources */,
+				BF25387F22EF24720093F977 /* CannonStructModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF25386B22EF22E20093F977 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF25386C22EF22E20093F977 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF25387022EF22E50093F977 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF25387122EF22E50093F977 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF25387422EF22E50093F977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF25387522EF22E50093F977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF25387722EF22E50093F977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "CannonGame(MVC)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.CannonGame-MVC-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF25387822EF22E50093F977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3K639YNZS;
+				INFOPLIST_FILE = "CannonGame(MVC)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Y.CannonGame-MVC-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF25385F22EF22E20093F977 /* Build configuration list for PBXProject "CannonGame(MVC)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF25387422EF22E50093F977 /* Debug */,
+				BF25387522EF22E50093F977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF25387622EF22E50093F977 /* Build configuration list for PBXNativeTarget "CannonGame(MVC)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF25387722EF22E50093F977 /* Debug */,
+				BF25387822EF22E50093F977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF25385C22EF22E20093F977 /* Project object */;
+}
