@@ -21,7 +21,7 @@ class RoomTitleView: UIView {
     
     var titleText = "roomTitle"
     var addressText = "roomTitle"
-    var rateText = "rate"
+    var rateText = "ratasde"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +29,8 @@ class RoomTitleView: UIView {
         self.addSubview(address)
         self.addSubview(rate)
         title.text = titleText
+        address.text = addressText
+        rate.text = rateText
         
 
         title.backgroundColor = .green
@@ -43,22 +45,24 @@ class RoomTitleView: UIView {
     func setView(){
            
         title.snp.makeConstraints{(make) in
-                   make.top.equalToSuperview()
-                   make.left.equalToSuperview()
-                   make.height.equalTo(30)
-           }
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
+            make.height.equalTo(30)
+       }
            
         address.snp.makeConstraints{(make) in
             make.top.equalTo(title.snp.bottom)
-               make.left.equalToSuperview()
-               make.height.equalTo(20)
-           }
+            make.left.equalToSuperview()
+            make.height.equalTo(20)
+       }
         
        rate.snp.makeConstraints{(make) in
-                make.top.equalTo(title.snp.bottom)
-                   make.left.equalTo(address)
-                   make.height.equalTo(20) 
-               }
-       }
+        
+        make.top.equalTo(title.snp.bottom)
+        make.left.equalTo(address.snp.right)
+        make.height.equalTo(20)
+
+        }
+   }
     
 }

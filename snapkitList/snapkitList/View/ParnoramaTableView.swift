@@ -32,7 +32,7 @@ class ParnoramaTableView: UITableView, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ParnoramaCell", for: indexPath) as! ParnoramaCell
-        cell.roomTitle = roomData.roomDatas[indexPath.row].title ?? ""
+        cell.roomTitleViews.title.text = roomData.roomDatas[indexPath.row].title ?? ""
         cell.addressText = roomData.roomDatas[indexPath.row].listAddress ?? ""
         cell.rateText = roomData.roomDatas[indexPath.row].rate ?? ""
         //thumbnail 

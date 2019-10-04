@@ -12,7 +12,11 @@ class ParnoramaCell: UITableViewCell {
     
     var roomTitle = ""
     var rateText = ""
-    var addressText = ""
+    var addressText = "" {
+        willSet {
+//            label.text = newValue
+        }
+    }
     var thumbnailImg = UIImageView()
     var roomTitleViews = RoomTitleView()
     
@@ -53,6 +57,7 @@ class ParnoramaCell: UITableViewCell {
         }
         roomTitleViews = RoomTitleView().then{
             $0.titleText = roomTitle
+            print(roomTitle)
             $0.rateText = rateText
             $0.addressText = addressText
             $0.setView()
@@ -60,6 +65,7 @@ class ParnoramaCell: UITableViewCell {
             $0.snp.makeConstraints { (make) in
                 make.top.equalTo(thumbnailImg.snp.bottom)
                 make.left.right.equalToSuperview()
+                make.width.equalToSuperview()
             }
         }
     }
